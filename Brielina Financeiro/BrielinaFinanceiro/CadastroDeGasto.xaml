@@ -14,7 +14,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock HorizontalAlignment="Center" Text="Tabela Gastos" Margin="12,12,0,0" FontSize="30" FontWeight="bold" Foreground="Red"/>
+        <TextBlock HorizontalAlignment="Center" Text="Novo Gasto" Margin="12,12,0,0" FontSize="30" FontWeight="bold" Foreground="Red"/>
 
 
         <StackPanel Grid.Row="1"  Margin="100,0,0,0">
