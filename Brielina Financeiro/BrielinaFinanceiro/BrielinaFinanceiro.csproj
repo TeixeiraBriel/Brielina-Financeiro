@@ -61,6 +61,7 @@
     <Compile Include="CadastroEntrada.xaml.cs">
       <DependentUpon>CadastroEntrada.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\registro.cs" />
     <Compile Include="SideMenu.xaml.cs">
       <DependentUpon>SideMenu.xaml</DependentUpon>
     </Compile>
