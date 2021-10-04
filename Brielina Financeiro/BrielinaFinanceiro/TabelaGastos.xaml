@@ -10,10 +10,27 @@
 
     <Grid>
         <StackPanel>
-            <TextBlock Text="Tabela Gastos" HorizontalAlignment="Right" Margin="0,10,10,0" FontSize="30" FontWeight="bold"/>
             <TextBlock Text="Tabela Gastos" HorizontalAlignment="Right" Margin="0,12,12,0" FontSize="30" FontWeight="bold" Foreground="Red"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,00,10,0">
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0" Visibility="Visible">
                 <TextBlock Text="Descricao: "/>
+                <TextBox Width="100"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,00,10,0">
+                <TextBlock Text="Fixo: "/>
+                <RadioButton VerticalAlignment="Center" GroupName="jogosGratis" IsChecked="False" x:Name="Radio123" Checked="CheckedBtnSim">Sim</RadioButton>
+                <RadioButton VerticalAlignment="Center" GroupName="jogosGratis" IsChecked="True" Checked="CheckedBtnSim">Nao</RadioButton>
+            </StackPanel>
+            
+            <StackPanel x:Name="TesteNome" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0" Visibility="Collapsed">
+                <TextBlock Text="Data: "/>
+                <TextBox Width="100"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,10,0" Visibility="Visible">
+                <TextBlock Text="Treta: "/>
                 <TextBox Width="100"/>
             </StackPanel>
         </StackPanel>

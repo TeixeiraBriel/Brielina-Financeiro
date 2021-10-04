@@ -20,9 +20,27 @@ namespace BrielinaFinanceiro
     /// </summary>
     public partial class TabelaGastos : Page
     {
+        private bool first = true;
         public TabelaGastos()
         {
             InitializeComponent();
+        }
+
+        private void CheckedBtnSim(object sender, RoutedEventArgs e)
+        {
+            if (first)
+            {
+                first = false;
+                return;
+            }
+            if (Radio123.IsChecked == true)
+            {
+                TesteNome.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                TesteNome.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }
