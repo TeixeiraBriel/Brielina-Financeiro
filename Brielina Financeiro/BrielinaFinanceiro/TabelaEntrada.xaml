@@ -9,6 +9,22 @@
       Title="TabelaEntrada">
 
     <Grid>
-        
+        <StackPanel Margin="50,0,0,0">
+            <TextBlock Text="Tabela de entrada" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Filtros ..." FontSize="16" Margin="20,0,0,0" />
+                <ComboBox Text="Não sei" HorizontalAlignment="Left" Margin="7,0,0,0" Width="100">
+                    <ComboBoxItem Content="item"/>
+                    <ComboBoxItem Content="item2"/>
+                </ComboBox>
+            </StackPanel>
+            <DataGrid Width="700" Height="330" Margin="0,10,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header ="Id" Width="150" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Valor" Width="150" Binding="{Binding Valor}"/>
+                    <DataGridTextColumn Header="Data" Width="150" Binding="{Binding Data}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Page>
