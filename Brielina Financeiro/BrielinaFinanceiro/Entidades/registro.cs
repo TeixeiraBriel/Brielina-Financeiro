@@ -8,5 +8,14 @@ namespace BrielinaFinanceiro.Entidades
 {
     public class registro
     {
+        public int Id { get; set; }
+        public double Valor { get; set; }
+        public string Data { get; set; }
+        public string Grupo { get; set; }
+        public int Credito { get; set; }
+        public int Tipo { get; set; }
+        public string Descricao { get; set; }
+        public int Fixa { get; set; }
+        public string DataVencimento { get; set; }
     }
 }
