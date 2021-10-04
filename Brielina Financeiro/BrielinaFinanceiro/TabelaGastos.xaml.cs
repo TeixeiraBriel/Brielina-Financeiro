@@ -20,27 +20,51 @@ namespace BrielinaFinanceiro
     /// </summary>
     public partial class TabelaGastos : Page
     {
-        private bool first = true;
+        private bool firstA = true;
+        private bool firstB = true;
+        private bool firstC = true;
+        private bool firstD = true;
+
         public TabelaGastos()
         {
             InitializeComponent();
         }
 
-        private void CheckedBtnSim(object sender, RoutedEventArgs e)
+        private void DataDiferenteFunc(object sender, RoutedEventArgs e)
         {
-            if (first)
+            if (firstA)
             {
-                first = false;
+                firstA = false;
                 return;
             }
-            if (Radio123.IsChecked == true)
+            if (DataDiferenteRadio.IsChecked == true)
             {
-                TesteNome.Visibility = Visibility.Visible;
+                DataInseridoPanel.Visibility = Visibility.Collapsed;
             }
             else
             {
-                TesteNome.Visibility = Visibility.Collapsed;
+                DataInseridoPanel.Visibility = Visibility.Visible;
             }
+        }
+
+        private void GastoFixoRadioFunc(object sender, RoutedEventArgs e)
+        {
+            if (firstB)
+            {
+                firstB = false;
+                return;
+            }
+            if (GastoFixoRadio.IsChecked == true)
+            {
+                gastoFixoPanel.Visibility = Visibility.Visible;
+                DataVencimentoPanel.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                gastoFixoPanel.Visibility = Visibility.Collapsed;
+                DataVencimentoPanel.Visibility = Visibility.Collapsed;
+            }
+
         }
     }
 }
