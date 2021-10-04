@@ -58,10 +58,23 @@
     <Compile Include="CadastroDeGasto.xaml.cs">
       <DependentUpon>CadastroDeGasto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CadastroEntrada.xaml.cs">
+      <DependentUpon>CadastroEntrada.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SideMenu.xaml.cs">
       <DependentUpon>SideMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TabelaEntrada.xaml.cs">
+      <DependentUpon>TabelaEntrada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabelaGastos.xaml.cs">
+      <DependentUpon>TabelaGastos.xaml</DependentUpon>
+    </Compile>
     <Page Include="CadastroDeGasto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CadastroEntrada.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -85,6 +98,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SideMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabelaEntrada.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabelaGastos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

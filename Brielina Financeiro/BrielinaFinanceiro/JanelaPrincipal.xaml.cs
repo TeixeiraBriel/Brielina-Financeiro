@@ -66,10 +66,17 @@ namespace BrielinaFinanceiro
         {
             CenterFrame.Source = new Uri("CadastroDeGasto.xaml", UriKind.Relative);
         }
-
-        private void Sobre(object sender, MouseButtonEventArgs e)
+        private void CadastroEntrada(object sender, MouseButtonEventArgs e)
         {
-            CenterFrame.Source = new Uri("Page0.xaml", UriKind.Relative);
+            CenterFrame.Source = new Uri("CadastroEntrada.xaml", UriKind.Relative);
+        }
+        private void TababelaEntrada(object sender, MouseButtonEventArgs e)
+        {
+            CenterFrame.Source = new Uri("TabelaEntrada.xaml", UriKind.Relative);
+        }
+        private void TabelaGastos(object sender, MouseButtonEventArgs e)
+        {
+            CenterFrame.Source = new Uri("TabelaGastos.xaml", UriKind.Relative);
         }
     }
 }

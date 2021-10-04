@@ -64,27 +64,27 @@
                        Grid.Column="5"
                        FontSize="12" 
                        Cursor="Hand" 
-                       MouseLeftButtonDown="Inicio"
+                       MouseLeftButtonDown="CadastroEntrada"
                        />
 
-            <TextBlock Text="Credito" 
+            <TextBlock Text="Tab.Entrada" 
                        Foreground="White"  
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center" 
                        Grid.Column="6"
                        FontSize="12" 
                        Cursor="Hand" 
-                       MouseLeftButtonDown="Inicio"
+                       MouseLeftButtonDown="TababelaEntrada"
                        />
 
-            <TextBlock Text="Debito" 
+            <TextBlock Text="Tab.Gastos" 
                        Foreground="White"  
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center" 
                        Grid.Column="7"
                        FontSize="12" 
                        Cursor="Hand" 
-                       MouseLeftButtonDown="Inicio"
+                       MouseLeftButtonDown="TabelaGastos"
                        />
 
             <Button Content="Fechar"
@@ -125,7 +125,8 @@
         <Grid  Row="1" Background="#FFF4F4F4" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="409*"/>
+                <ColumnDefinition Width="341*"/>
             </Grid.ColumnDefinitions>
 
             <Frame Grid.Column="0"
@@ -138,18 +139,17 @@
                    Margin="0,0,0,0"
                    Visibility="Hidden"/>
 
-            <Frame Grid.Column="1"
-                       Grid.ColumnSpan="2"
+            <Frame
+                       Grid.ColumnSpan="3"
                        x:Name="CenterFrame" 
                        VerticalAlignment="Stretch" 
                        VerticalContentAlignment="Center" 
                        HorizontalAlignment="Stretch"  
                        HorizontalContentAlignment="Center" 
                        Source="/BrielinaFinanceiro;component/Inicio.xaml" 
-                       NavigationUIVisibility="Hidden"
-                       Margin="-150,0,0,0"/>
+                       NavigationUIVisibility="Hidden"/>
 
-            <Rectangle Grid.Column="1" x:Name="btnCollapse" Fill="Blue" Height="30" Width="30" Margin="-130,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="2" MouseLeftButtonDown="Collapse" Cursor="Hand"/>
+            <Rectangle x:Name="btnCollapse" Fill="Blue" Height="30" Width="30" Margin="20,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" MouseLeftButtonDown="Collapse" Cursor="Hand"/>
         </Grid>
     </Grid>
 </Window>
