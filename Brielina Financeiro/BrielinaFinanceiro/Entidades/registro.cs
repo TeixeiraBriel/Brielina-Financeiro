@@ -18,4 +18,5 @@ namespace BrielinaFinanceiro.Entidades
         public int Fixa { get; set; }
         public string DataVencimento { get; set; }
     }
+
 }
