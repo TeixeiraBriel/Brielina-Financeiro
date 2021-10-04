@@ -9,61 +9,22 @@
       Title="TabelaGastos">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <TextBlock HorizontalAlignment="Center" Text="Tabela Gastos" Margin="12,12,0,0" FontSize="30" FontWeight="bold" Foreground="Red"/>
-
-        
-        <StackPanel Grid.Row="1"  Margin="100,0,0,0">
+        <StackPanel Margin="50,0,0,0">
+            <TextBlock Text="Tabela de Gastos" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0"/>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Descricao: " Grid.Column=" 1"/>
-                <TextBox x:Name="txtDescricao" Width="100" Grid.Column=" 2"/>
+                    <TextBlock Text="Filtros ..." FontSize="16" Margin="20,0,0,0" />
+                    <ComboBox Text="Não sei" HorizontalAlignment="Left" Margin="7,0,0,0" Width="100">
+                        <ComboBoxItem Content="item"/>
+                        <ComboBoxItem Content="item2"/>
+                    </ComboBox>
+                </StackPanel>
+                <DataGrid x:Name="DataGridEntrada" Width="700" Height="330" Margin="0,10,0,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header ="Descrição" Width="*" Binding="{Binding Descricao}"/>
+                        <DataGridTextColumn Header="Valor" Width="150" Binding="{Binding Valor}"/>
+                        <DataGridTextColumn Header="Data" Width="150" Binding="{Binding Data}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Margin="0,5,0,0" Visibility="Visible">
-                <TextBlock Text="Valor: "/>
-                <TextBox x:Name="txtValor" Width="100"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                <TextBlock Text="Pagamento Relizado Hoje? " />
-                <RadioButton VerticalAlignment="Center" GroupName="DataDiferente" IsChecked="True" x:Name="DataDiferenteRadio" Checked="DataDiferenteFunc">Sim</RadioButton>
-                <RadioButton VerticalAlignment="Center" GroupName="DataDiferente" IsChecked="False" Checked="DataDiferenteFunc">Nao</RadioButton>
-            </StackPanel>
-            <StackPanel x:Name="DataInseridoPanel" Orientation="Horizontal" Margin="0,5,0,0" Visibility="Collapsed">
-                <TextBlock Text="Data Gasto: "/>
-                <TextBox x:Name="txtDataInserido" Width="100"/>
-            </StackPanel>
-            
-            <StackPanel Orientation="Horizontal" Margin="0,5,0,0" Visibility="Visible">
-                <TextBlock Text="Grupo: "/>
-                <TextBox x:Name="txtGrupo" Width="100"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                <TextBlock Text="Cartão Credito? " />
-                <RadioButton VerticalAlignment="Center" GroupName="cartaoCredito" IsChecked="False" x:Name="cartaoCreditoRadio">Sim</RadioButton>
-                <RadioButton VerticalAlignment="Center" GroupName="cartaoCredito" IsChecked="True" >Nao</RadioButton>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                <TextBlock Text="Gasto Fixo?" />
-                <RadioButton VerticalAlignment="Center" GroupName="GastoFixo" IsChecked="False" x:Name="GastoFixoRadio" Checked="GastoFixoRadioFunc">Sim</RadioButton>
-                <RadioButton VerticalAlignment="Center" GroupName="GastoFixo" IsChecked="True" Checked="GastoFixoRadioFunc">Nao</RadioButton>
-            </StackPanel>
-            <StackPanel x:Name="gastoFixoPanel" Orientation="Horizontal" Margin="0,5,0,0" Visibility="Collapsed">
-                <TextBlock Text="Valor pode Alterar?" />
-                <RadioButton VerticalAlignment="Center" GroupName="ValorAltera" IsChecked="False" x:Name="ValorAlteraRadio">Sim</RadioButton>
-                <RadioButton VerticalAlignment="Center" GroupName="ValorAltera" IsChecked="True">Nao</RadioButton>
-            </StackPanel>
-            <StackPanel x:Name="DataVencimentoPanel" Orientation="Horizontal" Margin="0,5,0,0" Visibility="Collapsed">
-                <TextBlock Text="Data Vencimento: "/>
-                <TextBox x:Name="txtDataVencimento" Width="100"/>
-            </StackPanel>
-            
-        </StackPanel>
-    </Grid>
+        </Grid>
 </Page>
