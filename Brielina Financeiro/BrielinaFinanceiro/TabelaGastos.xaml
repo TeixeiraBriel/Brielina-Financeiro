@@ -18,7 +18,7 @@
                         <ComboBoxItem Content="item2"/>
                     </ComboBox>
                 </StackPanel>
-                <DataGrid x:Name="DataGridEntrada" Width="700" Height="330" Margin="0,10,0,0">
+                <DataGrid x:Name="DataGridGastos" Width="700" Height="330" Margin="0,10,0,0">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header ="Descrição" Width="*" Binding="{Binding Descricao}"/>
                         <DataGridTextColumn Header="Valor" Width="150" Binding="{Binding Valor}"/>

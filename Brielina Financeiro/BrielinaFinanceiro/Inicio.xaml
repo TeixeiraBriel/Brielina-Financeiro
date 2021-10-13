@@ -10,88 +10,16 @@
 
     <Grid>
 
-        <ScrollViewer>
-
-            <StackPanel>
-                <TextBlock Text="Nosso Produto" 
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontWeight="Medium"
-                           FontSize="25"
-                           Margin="0,20,0,0"/>
-
-                <StackPanel>
-                    <TextBlock Text="Uso" 
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontWeight="Medium"
-                           FontSize="20"
-                           Margin="0,20,30,0"/>
-                    <TextBlock Text="Diario" 
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontWeight="Medium"
-                           FontSize="20"
-                           Margin="30,0,0,0"/>
-
-
-
-                    <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." 
-                           TextWrapping="Wrap"
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontSize="15"
-                           Margin="50,0,50,0"/>
-                </StackPanel>
-
-                <StackPanel>
-                    <TextBlock Text="Uso" 
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontWeight="Medium"
-                           FontSize="20"
-                           Margin="0,20,30,0"/>
-                    <TextBlock Text="Casual" 
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontWeight="Medium"
-                           FontSize="20"
-                           Margin="30,0,0,0"/>
-
-
-
-                    <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." 
-                           TextWrapping="Wrap"
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontSize="15"
-                           Margin="50,0,50,0"/>
-                </StackPanel>
-
-                <StackPanel>
-                    <TextBlock Text="Uso" 
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontWeight="Medium"
-                           FontSize="20"
-                           Margin="0,20,30,0"/>
-                    <TextBlock Text="Unico" 
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontWeight="Medium"
-                           FontSize="20"
-                           Margin="30,0,0,0"/>
-
-
-
-                    <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." 
-                           TextWrapping="Wrap"
-                           HorizontalAlignment="Center"
-                           Foreground="Black"  
-                           FontSize="15"
-                           Margin="50,0,50,0"/>
-                </StackPanel>
-            </StackPanel>
-        </ScrollViewer>
+        <StackPanel>
+            <Button Margin="155,360,495,0" Content="Registrar Gastos" Width="150" Height="30"/>
+        </StackPanel>
+        <DataGrid x:Name="DataGridInicio" Margin="450,30,30,30">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Header ="Tipo" Width="80" Binding="{Binding Tipo}"/>
+                <DataGridTextColumn Header="Nome" Width="100" Binding="{Binding Nome}"/>
+                <DataGridTextColumn Header="Valor da Media" Width="150" Binding="{Binding ValorDaMedia}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
