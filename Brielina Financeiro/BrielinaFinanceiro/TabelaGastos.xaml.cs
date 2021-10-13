@@ -1,17 +1,7 @@
-﻿using System;
+﻿using RegistrosController;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using BrielinaFinanceiro.Entidades;
 
 namespace BrielinaFinanceiro
 {
@@ -20,9 +10,22 @@ namespace BrielinaFinanceiro
     /// </summary>
     public partial class TabelaGastos : Page
     {
+        RegistrosComandos _registros;
+
         public TabelaGastos()
         {
             InitializeComponent();
+            _registros = new RegistrosComandos();
+
+            List<Registro> registros = _registros.carregarRegistros();
+
+            foreach (var registro in registros)
+            {
+                if (registro.Tipo == 1)
+                {
+                    DataGridEntrada.Items.Add(registro);
+                }
+            }
         }
     }
 }

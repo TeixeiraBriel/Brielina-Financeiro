@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrielinaFinanceiro.Entidades
 {
-    public class registro
+    public class Registro
     {
         public int Id { get; set; }
         public double Valor { get; set; }
