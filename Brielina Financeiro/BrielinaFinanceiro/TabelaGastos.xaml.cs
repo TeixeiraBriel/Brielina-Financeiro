@@ -23,7 +23,7 @@ namespace BrielinaFinanceiro
             {
                 if (registro.Tipo == 1)
                 {
-                    DataGridEntrada.Items.Add(registro);
+                    DataGridGastos.Items.Add(registro);
                 }
             }
         }
